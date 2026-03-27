@@ -1,74 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Weather in Beni Mellal</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="images/page icon.png">
 
-    </head>
+<head>
+    <title>Weather in Beni Mellal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/page icon.png">
 
-    <body >
+</head>
 
-        <header>
-            <h1 id="header-title">Weather in Beni Mellal </h1>
-            <img id="top-icon" src="images/cloudy.png" alt="error" width="250">
+<body>
 
-            
-        </header>
+    <header>
+        <h1 id="header-title"></h1>
 
-        <nav  >
-            <div id="nav-bar">
-                <button class="nav-buttons">Monday</button><button class="nav-buttons">Tuesday</button><button class="nav-buttons">Wednesday</button><button class="nav-buttons">Thursday</button><button class="nav-buttons">Friday</button><button class="nav-buttons">Saturday</button> <button class="nav-buttons">Sunday</button>
-            </div>
-           
-        </nav>
+    </header>
 
-        <main>
-            <h1 id="main-title">Today</h1>
 
-            <div id="main-content">
-        
+    <main>
+
+        <div id="titles-container">
+            <h1 id="main-title"></h1>
+        </div>
+
+        <div id="main-container">
+
+            <div id="today-container">
                 <div id="left-part">
-                    <table id="main-table">
-                    <tr class="rows">
-                        <td class="col1"><h3 class="data">average Tempreture:</h3></td>
-                        <td class="col2"><h3 class="data">0°</h3></td>
-                        <td class="col3"><img class="symbols" src="images/tempreture.png" alt="error"></td>
-                    </tr>
-                    <tr class="rows">
-                        <td class="col1"><h3 class="data">humidity:</h3></td>
-                        <td class="col2"><h3 class="data">0%</h3></td>
-                        <td class="col3"><img class="symbols" src="images/humidity.png" alt="error"></td>
-                    </tr>
-                    <tr class="rows">
-                        <td class="col1"><h3 class="data">wind speed:</h3></td>
-                        <td class="col2"><h3 class="data">0km/h</h3></td>
-                        <td class="col3"><img class="symbols" src="images/wind.png" alt="error"></td>
-                    </tr>
-                    <tr class="rows">
-                        <td class="col1"><h3 class="data">Precipitaion:</h3></td>
-                        <td class="col2"><h3 class="data">0.0mm</h3></td>
-                        <td class="col3"><img class="symbols" src="images/precipitation.png" alt="error"></td>
-                    </tr>
-                    </table>
+
+                    <div class="data-containers">
+                        <h2 class="data">Tempreture:</h2>
+                        <h2 class="data">humidity:</h2>
+                        <h2 class="data">Precipitaion:</h2>
+                        <h2 class="data">Wind speed:</h2>
+                    </div>
+
+                    <div class="data-containers">
+                        <h2 class="data" id="tempreture"></h2>
+                        <h2 class="data" id="humidity"></h2>
+                        <h2 class="data" id="precipitation"></h2>
+                        <h2 class="data" id="windspeed"></h2>
+                    </div>
+
+                    <div class="data-containers">
+                        <img class="symbols" src="images/tempreture.png" alt="tempreture">
+                        <img class="symbols" src="images/humidity.png" alt="humidity">
+                        <img class="symbols" src="images/precipitation.png" alt="precipitation">
+                        <img class="symbols" src="images/wind.png" alt="wind">
+                    </div>
+
                 </div>
 
-                <div id="main-image-container">
-                <img id="im1" class="weather-cases" src="images/sunny.png" alt="error">
-                <img id="im2" class="weather-cases" src="images/foggy.png" alt="error">
-                <img id="im3" class="weather-cases" src="images/rainy.png" alt="error">
-                <img id="im4" class="weather-cases" src="images/partly-cloudy.png" alt="error">
+                <div id="right-part">
+
+                    <canvas id="data-graph" width="800" height="400"></canvas>
+
+                    <div id="time-data">
+                        <div class="time-bar">
+                            <h3 class="right-data">1</h3>
+                            <h3 class="right-data">2</h3>
+                            <h3 class="right-data">3</h3>
+                            <h3 class="right-data">4</h3>
+                            <h3 class="right-data">5</h3>
+                            <h3 class="right-data">6</h3>
+                            <h3 class="right-data">7</h3>
+                            <h3 class="right-data">8</h3>
+                        </div>
+                        <div class="time-bar">
+                            <h3 class="right-data">9</h3>
+                            <h3 class="right-data">10</h3>
+                            <h3 class="right-data">11</h3>
+                            <h3 class="right-data">12</h3>
+                            <h3 class="right-data">13</h3>
+                            <h3 class="right-data">14</h3>
+                            <h3 class="right-data">15</h3>
+                            <h3 class="right-data">16</h3>
+                        </div>
+                        <div class="time-bar">
+                            <h3 class="right-data">17</h3>
+                            <h3 class="right-data">18</h3>
+                            <h3 class="right-data">19</h3>
+                            <h3 class="right-data">20</h3>
+                            <h3 class="right-data">21</h3>
+                            <h3 class="right-data">22</h3>
+                            <h3 class="right-data">23</h3>
+                            <h3 class="right-data">24</h3>
+                        </div>
+
+
+
+
+
+                    </div>
+
                 </div>
+
+                
 
             </div>
 
-        </main>
+        </div>
+        
+        <div id="loading-screen">
+                    <br><br>
+                    <h1>Loading...</h1>
+        </div>
+    </main>
 
-    </body>
+    <script src="script.js"></script>
+</body>
 
 
 </html>
-
-
